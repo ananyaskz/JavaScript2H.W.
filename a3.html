@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        class Person {
+            constructor(n) {
+                this.name = n;
+            }
+            static hello() {
+                return "Hello ";
+            }
+        }
+        class Info extends Person {
+            constructor(name,city){
+                super(name);
+                this.city = city;
+            }
+            show() {
+                return Person.hello() + this.name + '. She is from' + this.city
+            }
+        }
+        let object = new Info("Jisoo"," Seoul");
+        document.getElementById("result").innerHTML = object.show();
+    </script>
+</body>
+</html>
